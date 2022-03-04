@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <base href="" />
+  <title>Калькулятор стоимости натяжных потолков "Топ-потолок"</title>
+  <meta name="description" content="Произведите расчет стоимости натяжного потолка на нашем калькуляторе и если введенные данные верны, это будет окончательная стоимость Вашего натяжного потолка">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="icon" href="img/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+<div class="u calc" data-facture="mat">
+	<div class="wrapper">
+		<h1 class="u-title">Натяжные потолки в Санкт-Петербурге калькулятор стоимости с&nbsp;установкой</h1>
+		<form class="calc-mobile" action="https://top-potolok.ru/php/phpzzayavka.php" method="post">
+			<div class="calc-number-range">
+				<p>Площадь потолка</p>
+				<input type="number" min="5" value="20" name="square" max="90" required>
+				<p>м<sup>2</sup></p>
+			</div>
+			<div class="calc-range">
+				<div class="calc-range-filled">
+				</div>
+				<div class="calc-range-circle"></div>
+				<div class="calc-range-min">5</div>
+				<div class="calc-range-max">90</div>
+				<div class="calc-range-curr">25</div>
+			</div>
+			<div class="calc-number-range">
+				<p>Точек освещения</p>
+				<input type="number" min="0" value="0" name="lights" max="40" required>
+				<p>шт.</p>
+			</div>
+			<p class="calc-mobile-subtitle">Стоимость потолка <strong>с установкой!</strong></p>
+			<div class="calc-mobile-price">от <span>0</span> руб</div>
+			<input type="number" name="summa" class="calc-mobile-summ hidden" required>
+			<input type="tel" name="phone" class="phone" placeholder="Ваш телефон" required>
+			<input type="submit" name="submit" value="Оставить заявку">
+			<div class="calc-mobile-gift">
+				<img src="img/svet-gift.webp.html" alt="">
+				<p>Светильники<br><span>в подарок</span></p>
+			</div>
+		</form>
+		<div class="ps-flex ps-sb calc-flw">		
+			<div class="calc-item calc-item-mob">
+				<p class="calc-title">1. Фактура</p>
+				<div class="flex calc-flex-1">
+
+					<div class="calc-item-box calc-item-box-1 calc-item-box-factures">
+						<label class="label-title label-title-no-line">	&#160;</label>
+
+						<input type="radio" id="facture1" name="facture" value="Матовая" checked="checked" data-facture="mat">
+						<label class="manufacturer-label" for="facture1">Матовые</label>
+
+						<input type="radio" id="facture2" name="facture" value="Глянцевая" data-facture="glyanc">
+						<label class="manufacturer-label" for="facture2">Глянцевые</label>
+
+						<input type="radio" id="facture3" name="facture" value="Сатиновая" data-facture="sat">
+						<label class="manufacturer-label" for="facture3">Сатиновые</label>
+
+						<input type="radio" id="facture4" name="facture" value="Тканевая" data-facture="tkan">
+						<label class="manufacturer-label" for="facture4">Тканевые</label>
+
+					</div>
+				</div>
+			</div>
+			<div class="calc-item calc-item-mob">
+				<p class="calc-title">2. Производитель</p>
+				<div class="flex calc-flex-1">
+
+					<div class="calc-item-box calc-item-box-1 calc-item-box-manufacturers">
+						
+						
+						<label class="label-title">&#160;</label>
+
+						<input type="radio" id="manufacturer1" name="manufacturer" value="560" checked="checked" data-factures="mat glyanc sat">
+						<label class="manufacturer-label" for="manufacturer1">Classic</label>
+
+						<input type="radio" id="manufacturer2" name="manufacturer" value="600" data-factures="mat glyanc sat">
+						<label class="manufacturer-label" for="manufacturer2">Premium</label>
+
+						<input type="radio" id="manufacturer3" name="manufacturer" value="710" data-factures="mat glyanc sat">
+						<label class="manufacturer-label" for="manufacturer3">Evolution</label>
+
+						<input type="radio" id="manufacturer4" name="manufacturer" value="770" data-factures="mat glyanc sat">
+						<label class="manufacturer-label" for="manufacturer4">Pongs</label>
+
+
+						<input type="radio" id="manufacturer7" name="manufacturer" value="1170" data-factures="mat">
+						<label class="manufacturer-label" for="manufacturer7">Teqtum</label>
+						
+						<input type="radio" id="manufacturer10" name="manufacturer" value="1320" data-factures="mat sat glyanc">
+						<label class="manufacturer-label" for="manufacturer10">Lumfer</label>
+
+						<input type="radio" id="manufacturer8" name="manufacturer" value="670" data-factures="mat">
+						<label class="manufacturer-label" for="manufacturer8">Cold stretch</label>
+
+						<input type="radio" id="manufacturer5" name="manufacturer" value="1320" data-factures="tkan">
+						<label class="manufacturer-label" for="manufacturer5">D-Premium</label>
+
+						<input type="radio" id="manufacturer6" name="manufacturer" value="3180" data-factures="tkan">
+						<label class="manufacturer-label" for="manufacturer6">Clipso</label>
+
+						<input type="radio" id="manufacturer9" name="manufacturer" value="3350" data-factures="tkan">
+						<label class="manufacturer-label" for="manufacturer9">Cerutti</label>
+					</div>
+				</div>
+			</div>
+			<div class="calc-item calc-item-mob">
+				<p class="calc-title">3. Помещение</p>
+				<div class="calc-item-box">
+					
+					<label class="label-title">Площадь, м2</label>
+					<div class="calc-control-box calc-control-box--mb">
+						<div class="calc-control minus">−</div>
+						<input type="number" value="0" min="0" name="area" class="calculator2-input calc-input-area">
+						<div class="calc-control plus">+</div>
+					</div>
+
+					<label class="label-title">Углы, шт</label>
+					<div class="calc-control-box">
+						<div class="calc-control minus">−</div>
+						<input type="number" value="4" min="0" name="angles" class="calculator2-input calc-input-angles">
+						<div class="calc-control plus">+</div>
+					</div>
+				</div>
+
+			</div>
+
+
+			<div class="calc-item calc-item-mob">
+				<p class="calc-title">4. Освещение</p>
+				<div class="calc-item-box ">
+
+					<label class="label-title">Светильники, шт</label>
+					<div class="calc-control-box calc-control-box--mb">
+						<div class="calc-control minus">−</div>
+						<input type="number" value="0" min="0" name="svet" class="calculator2-input calc-input-svet">
+						<div class="calc-control plus">+</div>
+					</div>
+
+					<label class="label-title">Люстры, шт</label>
+					<div class="calc-control-box">
+						<div class="calc-control minus">−</div>
+						<input type="number" value="0" min="0" name="lamp" class="calculator2-input calc-input-lamp">
+						<div class="calc-control plus">+</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<div class="calc-price">
+			<p class="calc-price-title"><span>Оформите заказ</span> и если вы не до конца определились с выбором, наш замерщик поможет Вам</p>
+			<p class="calc-price-title">подобрать фактуру, цвет и аксессуары для натяжного потолка</p>
+			<!-- <button class="calc-btn">Сравнительная таблица производителей</button> -->
+		</div>
+		<div class="form-kalc flex-wrap">
+			<p class="form-kalc__text">Итоговая стоимость: </p>
+			<p id="ps-final-price" class="calc-price-final"><span>0</span> ₽</p>
+			<p id="ps-previous-price" class="calc-price-previous"><span>0</span> ₽</p>
+			<form action="https://top-potolok.ru/php/phpzzayavka.php" method="post" class="reformm ajax_form11 AVAST_PAM_nonloginform">
+				<input type="hidden" name="page" value="Натяжные потолки">
+				<input type="hidden" name="forma" value="Основная форма">
+				<input type="hidden" name="area_m2">
+				<input type="hidden" name="corners">
+				<input type="hidden" name="facture_data">
+				<input type="hidden" name="lamps">
+				<input type="hidden" name="material">
+				<input type="hidden" name="fixtures">
+				<input type="hidden" name="summa" id="form-sum">
+				<input type="hidden" name="form-id" class="form_name">
+				<div class="flex jcc flex-wrap">
+					<input type="tel" class="phone" name="phone" placeholder="Ваш номер телефона" required="">
+					<input type="submit" class="calc_submit" name="submit" value="Оформить заказ">
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+
+
+                
+<script src="js/jquery.js" type="text/javascript"></script>
+<script src="js/slick.min.js" type="text/javascript"></script>
+<script src="js/common.min.js" type="text/javascript"></script>
+<script src="js/work-video.js" type="text/javascript"></script>
+</body>
+</html>
